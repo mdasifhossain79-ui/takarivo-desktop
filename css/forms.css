@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Takarivo — css/forms.css
+   Purpose: Shared form field styles — used by Settings, Login, Register,
+   and every "Add ___" form going forward.
+   ========================================================================== */
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.form-input {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+}
+
+.form-input:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+}
+
+.form-input[aria-invalid="true"] {
+    border-color: var(--color-danger);
+}
+
+.form-error {
+    color: var(--color-danger);
+    font-size: var(--font-size-sm);
+    margin-top: var(--space-xs);
+}

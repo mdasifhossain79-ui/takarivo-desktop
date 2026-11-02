@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In — Takarivo</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="auth-page">
+        <div class="card auth-card">
+            <div class="auth-logo">Takarivo</div>
+            <p class="auth-subtitle">Personal Finance Manager</p>
+
+            <div class="form-banner error" id="login-error"></div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label class="form-label" for="login-email">Email</label>
+                    <input class="form-input" type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="login-password">Password</label>
+                    <input class="form-input" type="password" id="login-password" required>
+                </div>
+                <div class="flex-between mb-md">
+                    <label class="flex gap-sm" style="font-size: var(--font-size-sm);">
+                        <input type="checkbox" id="remember-me" checked> Remember me
+                    </label>
+                    <a href="forgot-password.html" style="font-size: var(--font-size-sm);">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </form>
+
+            <p class="auth-footer-link">Don't have an account? <a href="register.html">Create Account</a></p>
+        </div>
+    </div>
+
+    <script src="../js/authStorage.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

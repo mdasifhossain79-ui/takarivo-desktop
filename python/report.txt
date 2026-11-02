@@ -1,0 +1,26 @@
+============================================================
+Takarivo Financial Report (sample_transactions.csv)
+============================================================
+
+SUMMARY
+------------------------------------------------------------
+Transactions : 3
+Income       : BDT 68,500.00
+Expenses     : BDT 4,250.00
+Net savings  : BDT 64,250.00
+
+SPENDING BY CATEGORY
+------------------------------------------------------------
+Food                       BDT 2,450.00    57.6%
+Utilities                  BDT 1,800.00    42.4%
+
+BUDGETS
+------------------------------------------------------------
+Food             BDT 2,450.00 of BDT 8,000.00 (31%) - on-track, BDT 5,550.00 left
+Utilities        BDT 1,800.00 of BDT 3,000.00 (60%) - on-track, BDT 1,200.00 left
+Transport        BDT 0.00 of BDT 4,000.00 (0%) - on-track, BDT 4,000.00 left
+
+GOALS
+------------------------------------------------------------
+Emergency Fund   BDT 62,000.00 of BDT 100,000.00 (62%) - in-progress
+New Laptop       BDT 90,000.00 of BDT 90,000.00 (100%) - completed

@@ -1,0 +1,3 @@
+# Takarivo is a private, local-only app. Ask all crawlers to index nothing.
+User-agent: *
+Disallow: /

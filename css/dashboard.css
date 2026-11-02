@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Takarivo — css/dashboard.css
+   Purpose: KPI cards, chart container, and widget list styles for the
+   Dashboard page.
+   ========================================================================== */
+
+.kpi-card .kpi-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.kpi-card .kpi-value {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-top: var(--space-xs);
+}
+
+.kpi-positive { color: var(--color-success); }
+.kpi-negative { color: var(--color-danger); }
+
+.chart-container {
+    height: 280px;
+    position: relative;
+}
+
+.widget-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.widget-list-item:last-child {
+    border-bottom: none;
+}
+
+.widget-list-item .item-meta {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}

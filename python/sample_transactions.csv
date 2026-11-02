@@ -1,0 +1,4 @@
+date,description,merchant,category,account,transaction_type,amount,notes
+2026-10-01,Salary Deposit,,Salary,Main Account,income,68500,
+2026-10-03,Grocery Store,Shwapno,Food,Main Account,expense,2450,
+2026-10-05,Electricity Bill,,Utilities,Main Account,expense,1800,

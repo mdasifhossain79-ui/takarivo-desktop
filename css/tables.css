@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Takarivo — css/tables.css
+   Purpose: Shared table/list styles for Accounts, Transactions, Cards,
+   Budgets, and Goals pages.
+   ========================================================================== */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    text-align: left;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    padding: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.data-table td {
+    padding: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.badge-success { background-color: #E6F4EC; color: var(--color-success); }
+.badge-danger { background-color: #FBEAEA; color: var(--color-danger); }
+.badge-warning { background-color: #FDF3DC; color: var(--color-warning); }
+.badge-neutral { background-color: var(--color-primary-light); color: var(--color-primary); }

@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Takarivo — css/auth.css
+   Purpose: Shared layout for Login, Register, Forgot Password, and Reset
+   Password pages — a centered card on a plain background.
+   ========================================================================== */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-logo {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.auth-footer-link {
+    text-align: center;
+    margin-top: var(--space-md);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.auth-footer-link a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.form-banner {
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-md);
+    display: none;
+}
+
+.form-banner.show {
+    display: block;
+}
+
+.form-banner.error {
+    background-color: #FBEAEA;
+    color: var(--color-danger);
+}
+
+.form-banner.success {
+    background-color: #E6F4EC;
+    color: var(--color-success);
+}
+
+.btn-block {
+    width: 100%;
+}

@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Takarivo — css/responsive.css
+   Purpose: Breakpoint rules for tablet and mobile. Loaded LAST so these
+   rules override the base styles.
+   Mobile = 767px and below. Desktop layout starts at 768px.
+   ========================================================================== */
+
+/* ---------- Mobile and tablet portrait (max-width: 767px) ---------- */
+@media (max-width: 767px) {
+    .container {
+        padding-inline: var(--space-md);
+    }
+
+    .grid-auto {
+        grid-template-columns: 1fr;
+    }
+
+    /* App shell: sidebar becomes a slide-in drawer */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        transform: translateX(-100%);
+        visibility: hidden;
+        transition: transform 0.2s ease, visibility 0.2s;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .sidebar-backdrop.show {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 90;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .app-header {
+        padding-inline: var(--space-md);
+        gap: var(--space-sm);
+    }
+
+    .app-header h2 {
+        font-size: var(--font-size-base);
+    }
+
+    .page-body {
+        padding: var(--space-md);
+    }
+
+    /* Wide tables scroll sideways inside their card instead of overflowing */
+    .card {
+        overflow-x: auto;
+    }
+
+    .data-table {
+        min-width: 640px;
+    }
+}
+
+/* ---------- Small phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+    .container {
+        padding-inline: var(--space-sm);
+    }
+
+    /* Homepage card: stack Login / Get Started full width */
+    .home-actions {
+        flex-direction: column;
+    }
+
+    .home-actions .btn {
+        width: 100%;
+    }
+
+    .chart-container {
+        height: 220px;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help — Takarivo</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/help-page.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="sidebar-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">Takarivo</div>
+            <a class="sidebar-link" href="dashboard.html">Dashboard</a>
+            <a class="sidebar-link" href="accounts.html">Accounts</a>
+            <a class="sidebar-link" href="transactions.html">Transactions</a>
+            <a class="sidebar-link" href="cards.html">Cards</a>
+            <a class="sidebar-link" href="budgets.html">Budgets</a>
+            <a class="sidebar-link" href="goals.html">Goals</a>
+            <a class="sidebar-link" href="reports.html">Reports</a>
+            <a class="sidebar-link" href="settings.html">Settings</a>
+            <a class="sidebar-link" href="help.html">Help</a>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <button class="menu-toggle btn btn-secondary">☰</button>
+                <h2>Help</h2>
+                <button id="logout-btn" class="btn">Logout</button>
+            </header>
+
+            <div class="page-body">
+                <div class="card" style="max-width: 640px;">
+                    <h3 class="mb-md">Frequently Asked Questions</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                            <span>How do I add a new transaction?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p>Go to the Transactions page and click "+ Add Transaction". Fill in the date, description, category, and amount, then save.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                            <span>How are budget statuses calculated?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p>Status is based on percent spent: under 70% is "On Track", 70–89% is "Near Limit", 90–100% is "Critical", and over 100% is "Over Budget".</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                            <span>Is my data stored online?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <p>Takarivo runs fully offline on your own computer, with your data stored in a local MySQL database — nothing is sent to the cloud.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/help.js"></script>
+</body>
+</html>

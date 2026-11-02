@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Takarivo — css/budgets-page.css
+   Purpose: Styles specific to the Budgets page — progress bar per budget.
+   ========================================================================== */
+
+.budget-item {
+    margin-bottom: var(--space-lg);
+}
+
+.budget-item:last-child {
+    margin-bottom: 0;
+}
+
+.progress-bar-track {
+    width: 100%;
+    height: 8px;
+    background-color: var(--color-bg);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-top: var(--space-xs);
+}
+
+.progress-bar-fill {
+    height: 100%;
+}
+
+.progress-bar-fill.on-track { background-color: var(--color-success); }
+.progress-bar-fill.near-limit { background-color: var(--color-warning); }
+.progress-bar-fill.critical { background-color: #E0732A; }
+.progress-bar-fill.over-budget { background-color: var(--color-danger); }
+
+.item-meta {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}

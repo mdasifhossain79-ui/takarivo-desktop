@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Takarivo — css/help-page.css
+   Purpose: Accessible accordion styles for the Help page FAQ list.
+   ========================================================================== */
+
+.faq-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: var(--space-md) 0;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question .faq-icon {
+    transition: transform 0.15s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease;
+}
+
+.faq-answer.open {
+    max-height: 300px;
+    padding-bottom: var(--space-md);
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="auth-checking">
+<head>
+    <script src="../js/authGuard.js"></script>
+    <script>document.documentElement.classList.remove("auth-checking");</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards — Takarivo</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/cards-page.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="sidebar-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">Takarivo</div>
+            <a class="sidebar-link" href="dashboard.html">Dashboard</a>
+            <a class="sidebar-link" href="accounts.html">Accounts</a>
+            <a class="sidebar-link" href="transactions.html">Transactions</a>
+            <a class="sidebar-link" href="cards.html">Cards</a>
+            <a class="sidebar-link" href="budgets.html">Budgets</a>
+            <a class="sidebar-link" href="goals.html">Goals</a>
+            <a class="sidebar-link" href="reports.html">Reports</a>
+            <a class="sidebar-link" href="settings.html">Settings</a>
+            <a class="sidebar-link" href="help.html">Help</a>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <button class="menu-toggle btn btn-secondary">☰</button>
+                <h2>Cards</h2>
+                <button id="logout-btn" class="btn">Logout</button>
+            </header>
+
+            <div class="page-body">
+                <div class="flex-between mb-lg">
+                    <p>Your credit cards and utilization.</p>
+                    <button class="btn btn-primary" id="add-card-btn">+ Add Card</button>
+                </div>
+
+                <!-- Add / Edit card -->
+                <div class="card mb-lg" id="card-form-card" hidden style="max-width: 480px;">
+                    <h3 class="mb-md" id="card-form-title">Add Card</h3>
+                    <div class="form-banner error" id="card-form-error"></div>
+                    <form id="card-form">
+                        <div class="form-group">
+                            <label class="form-label" for="card-name">Card Name</label>
+                            <input class="form-input" type="text" id="card-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="card-limit">Credit Limit (৳)</label>
+                            <input class="form-input" type="number" step="0.01" min="0.01" id="card-limit" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="card-due">Current Due Amount (৳)</label>
+                            <input class="form-input" type="number" step="0.01" min="0" id="card-due" value="0">
+                        </div>
+                        <div class="flex gap-md">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-close-form>Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Pay card -->
+                <div class="card mb-lg" id="payment-form-card" hidden style="max-width: 480px;">
+                    <h3 class="mb-md" id="payment-form-title">Pay Card</h3>
+                    <div class="form-banner error" id="payment-form-error"></div>
+                    <form id="payment-form">
+                        <div class="form-group">
+                            <label class="form-label" for="pay-account">Pay from account</label>
+                            <select class="form-input" id="pay-account" required></select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="pay-amount">Amount (৳)</label>
+                            <input class="form-input" type="number" step="0.01" min="0.01" id="pay-amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="pay-date">Date</label>
+                            <input class="form-input" type="date" id="pay-date" required>
+                        </div>
+                        <div class="flex gap-md">
+                            <button type="submit" class="btn btn-primary">Make Payment</button>
+                            <button type="button" class="btn btn-secondary" data-close-form>Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Add card expense -->
+                <div class="card mb-lg" id="expense-form-card" hidden style="max-width: 480px;">
+                    <h3 class="mb-md" id="expense-form-title">Add Card Expense</h3>
+                    <div class="form-banner error" id="expense-form-error"></div>
+                    <form id="expense-form">
+                        <div class="form-group">
+                            <label class="form-label" for="exp-description">Description</label>
+                            <input class="form-input" type="text" id="exp-description" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="exp-category">Category</label>
+                            <input class="form-input" type="text" id="exp-category" list="exp-category-options" required>
+                            <datalist id="exp-category-options">
+                                <option value="Food"></option>
+                                <option value="Utilities"></option>
+                                <option value="Transport"></option>
+                                <option value="Entertainment"></option>
+                                <option value="Shopping"></option>
+                                <option value="Other"></option>
+                            </datalist>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="exp-amount">Amount (৳)</label>
+                            <input class="form-input" type="number" step="0.01" min="0.01" id="exp-amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="exp-date">Date</label>
+                            <input class="form-input" type="date" id="exp-date" required>
+                        </div>
+                        <div class="flex gap-md">
+                            <button type="submit" class="btn btn-primary">Save Expense</button>
+                            <button type="button" class="btn btn-secondary" data-close-form>Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card" id="cards-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/authStorage.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/cards.js"></script>
+</body>
+</html>

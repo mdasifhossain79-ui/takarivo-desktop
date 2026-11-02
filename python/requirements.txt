@@ -1,0 +1,7 @@
+# Takarivo — python/requirements.txt
+#
+# These utility scripts use only the Python standard library
+# (csv, pathlib, typing, collections) — nothing needs to be installed.
+#
+# The file is kept for convention, and as the place to list real
+# dependencies if a future script needs one.

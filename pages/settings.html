@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="auth-checking">
+<head>
+    <script src="../js/authGuard.js"></script>
+    <script>document.documentElement.classList.remove("auth-checking");</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings — Takarivo</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="sidebar-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">Takarivo</div>
+            <a class="sidebar-link" href="dashboard.html">Dashboard</a>
+            <a class="sidebar-link" href="accounts.html">Accounts</a>
+            <a class="sidebar-link" href="transactions.html">Transactions</a>
+            <a class="sidebar-link" href="cards.html">Cards</a>
+            <a class="sidebar-link" href="budgets.html">Budgets</a>
+            <a class="sidebar-link" href="goals.html">Goals</a>
+            <a class="sidebar-link" href="reports.html">Reports</a>
+            <a class="sidebar-link" href="settings.html">Settings</a>
+            <a class="sidebar-link" href="help.html">Help</a>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <button class="menu-toggle btn btn-secondary">☰</button>
+                <h2>Settings</h2>
+                <button id="logout-btn" class="btn">Logout</button>
+            </header>
+
+                    <div class="page-body">
+                <div class="card mb-lg" style="max-width: 480px;">
+                    <h3 class="mb-md">Profile</h3>
+                    <div class="form-banner" id="profile-banner"></div>
+                    <form id="settings-form">
+                        <div class="form-group">
+                            <label class="form-label" for="full-name">Full Name</label>
+                            <input class="form-input" type="text" id="full-name" required maxlength="150">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-input" type="email" id="email" disabled>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+
+                <div class="card" style="max-width: 480px;">
+                    <h3 class="mb-md">Change Password</h3>
+                    <div class="form-banner" id="password-banner"></div>
+                    <form id="password-form">
+                        <div class="form-group">
+                            <label class="form-label" for="current-password">Current Password</label>
+                            <input class="form-input" type="password" id="current-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="new-password">New Password</label>
+                            <input class="form-input" type="password" id="new-password" required minlength="8">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="confirm-password">Confirm New Password</label>
+                            <input class="form-input" type="password" id="confirm-password" required minlength="8">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Change Password</button>
+                    </form>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+     <script src="../js/authStorage.js"></script>
+     <script src="../js/navigation.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/settings.js"></script>
+</body>
+</html>
